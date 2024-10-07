@@ -59,7 +59,7 @@ document.querySelector(".card_3").addEventListener("click", function () {
 document.querySelector(".card_4").addEventListener("click", function () {
   if (this.classList.contains("flipped3")) {
     // If the card is already flipped, navigate to top.html
-    window.location.href = "shoes.html";
+    window.location.href = "/shoes";
   } else {
     // Otherwise, flip the card and bring it to the front
     this.classList.add("flipped3");
@@ -78,7 +78,7 @@ document.querySelector(".card_4").addEventListener("click", function () {
 document.querySelector(".card_5").addEventListener("click", function () {
   if (this.classList.contains("flipped4")) {
     // If the card is already flipped, navigate to top.html
-    window.location.href = "hat.html";
+    window.location.href = "/hat";
   } else {
     // Otherwise, flip the card and bring it to the front
     this.classList.add("flipped4");

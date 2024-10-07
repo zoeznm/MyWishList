@@ -26,12 +26,17 @@ app.get("/bottom", (req, res)=> {
   res.render("bottom");
 });
 
-
 app.get("/bag", (req, res)=> {
   res.render("bag");
 });
 
+app.get("/shoes", (req, res)=> {
+  res.render("shoes");
+});
 
+app.get("/hat", (req, res)=> {
+  res.render("hat");
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
