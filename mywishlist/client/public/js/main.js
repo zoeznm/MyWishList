@@ -21,7 +21,7 @@ document.querySelector(".card").addEventListener("click", function () {
 document.querySelector(".card_2").addEventListener("click", function () {
   if (this.classList.contains("flipped1")) {
     // If the card is already flipped, navigate to top.html
-    window.location.href = "bottom.html";
+    window.location.href = "/bottom";
   } else {
     // Otherwise, flip the card and bring it to the front
     this.classList.add("flipped1");
