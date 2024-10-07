@@ -3,11 +3,11 @@ const path = require("path");
 const app = express();
 
 // 정적 파일 경로 설정
-app.use(express.static(path.join(__dirname, "../client/public"))); // 수정된 부분
+app.use(express.static(path.join(__dirname, "../client/public"))); 
 
 // 뷰 엔진 설정
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../client/views")); // 수정된 부분
+app.set("views", path.join(__dirname, "../client/views")); 
 
 // 기본 라우트 설정
 app.get("/", (req, res) => {
