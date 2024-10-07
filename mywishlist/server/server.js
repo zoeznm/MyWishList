@@ -2,21 +2,19 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
-// 정적 파일 서빙 (React 앱 빌드 후)
-app.use(express.static(path.join(__dirname, "../client/build")));
+// 정적 파일 경로 설정
+app.use(express.static(path.join(__dirname, "../client/public"))); // 수정된 부분
 
-// API 엔드포인트 (백엔드에서 처리할 API)
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from Express!" });
+// 뷰 엔진 설정
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "../client/views")); // 수정된 부분
+
+// 기본 라우트 설정
+app.get("/", (req, res) => {
+  res.render("main"); // client/views/main.ejs
 });
 
-// React 앱 서빙 (모든 다른 요청을 React로 보냄)
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-});
-
-// 서버 실행
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
