@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Manrope:wght@200..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Anek Devanagari", sans-serif;
+  text-decoration: none;
+}
+.back {
+  margin-left: 5px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+.back:hover {
+  color: blue;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 부모 요소의 높이 설정 */
+}
+.left {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+}
+.text {
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.text2 {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.right {
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+}
+.roa {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 150px;
+  height: 170px;
+}
+.roa:hover {
+  color: blue;
+}
+.kapital {
+  position: absolute;
+  top: 45%;
+  left: 70%;
+  width: 150px;
+  height: 170px;
+}
+.kapital:hover {
+  color: blue;
+}
+.cayl {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  width: 150px;
+  height: 170px;
+}
+.cayl:hover {
+  color: blue;
+}
+.chrome {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  width: 170px;
+  height: 170px;
+}
+.chrome:hover {
+  color: blue;
+}
+.dept {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  width: 150px;
+  height: 170px;
+}
+.dept:hover {
+  color: blue;
+}
+.right {
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  overflow-y: auto; /* 세로 스크롤 가능 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.right img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+.additional-div {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  margin: 10px 0;
+  color: #000;
+}
