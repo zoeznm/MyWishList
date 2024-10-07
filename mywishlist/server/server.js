@@ -14,6 +14,10 @@ app.get("/", (req, res) => {
   res.render("main"); // client/views/main.ejs
 });
 
+app.get("/main", (req, res) => {
+  res.render("main"); // client/views/main.ejs
+});
+
 app.get("/top", (req, res) => {
   res.render("top"); // client/views/top.ejs
 });
@@ -21,6 +25,13 @@ app.get("/top", (req, res) => {
 app.get("/bottom", (req, res)=> {
   res.render("bottom");
 });
+
+
+app.get("/bag", (req, res)=> {
+  res.render("bag");
+});
+
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

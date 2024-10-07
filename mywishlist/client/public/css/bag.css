@@ -1,0 +1,456 @@
+/*fonts 저장소*/
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/*color 팔레트*/
+:root {
+  --color1 : black;
+  --color2 : white;
+  --color3 : #d7abc5;
+  --color4 : #0ab4fc;
+  --color5 : #00cdc0;
+  --color6 : #80faa3;
+  --color7 : #d4eae0;
+  --color4-transparent: rgba(212, 234, 224, 0.3);
+  --color2-transparent: rgba(255, 255, 255, 0.3);
+}
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  place-content: center;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+#canvas
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+}
+.container {
+  display: flex;
+  width: 200vw; /* 두 개의 섹션을 포함할 수 있게 설정 */
+  transition: transform 0.5s ease-in-out;
+}
+.section {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  background-color: black;
+}
+#about {
+  background-color: black;
+  position: relative;
+}
+.enter1 {
+  display: none;
+}
+.popup {
+  display: none; /* 팝업은 기본적으로 숨겨져 있습니다 */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-content {
+  position: absolute;
+  top: -9%;
+  left: 38%;
+  background-color: black;
+  margin: 15% auto;
+  padding: 40px;
+  border: 2px solid white;
+  width: 300px;
+  height: 400px;
+  max-width: 600px;
+  box-shadow: 10px 10px  var(--color7);
+  color: white;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.popup-content > h2 {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+  color: var(--color7);
+
+}
+.poptext1{
+position: absolute;
+top: 35%;
+}
+.poptext2 {
+  position:absolute;
+  top: 45%;
+}
+.poptext3 {
+  position:absolute;
+  top: 60%;
+}
+
+.poptext4 {
+  position:absolute;
+  top: 75%;
+}
+
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* !  중요한 부분  ! */
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin-top: 160px;
+}
+
+input[type=text] {
+  --w: 1ch;   /* control the width for each letter */
+  --g: .15em; /* the gap between letters */
+  --b: 2px;   /* the border thickness */
+  --c: white;
+  font-size: 70px;
+  line-height: 1.5; /* control the height */
+  letter-spacing: var(--w);
+  font-family: monospace;
+  width: calc(var(--n)*(1ch + var(--w)));
+  padding-left: calc((var(--w) - var(--g))/2);
+  clip-path: inset(0 calc(var(--w)/2) 0 0);
+  background:
+    repeating-linear-gradient(90deg,
+      var(--c) 0 var(--b), var(--c) 0 calc(1ch + var(--w) - var(--g) - var(--b)),
+      var(--c) 0 calc(1ch + var(--w) - var(--g)), black 0 2ch),
+    conic-gradient(at calc(100% - var(--g) - 100px) var(--b), var(--c) 0%, var(--c) 0) 
+    0 0/calc(1ch + var(--w)) calc(100% - var(--b));
+  border: none;
+  outline: 10px;
+  position: relative;
+  margin: 10px 0;
+}
+
+input[type=text]:focus-visible {
+  --c: var(--color7);
+}
+
+input.invalid {
+  background-color: red;
+}
+
+.enterzone {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter1 {
+  font-size: 20px;
+  margin: 5px 0;
+}
+.title{
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: white;
+  font-size: 30px;
+  font-size: 100px;
+}
+.title {
+  margin: 10px 20px 50px ;
+  position: absolute;
+  top: 13%;
+  left: 30%;
+}
+
+.title2 {
+  margin: 10px 20px 50px;
+  position: absolute;
+  top: 27%;
+  left: 29.8%;
+}
+
+.title2{
+  color: white;
+}
+.title3 {
+  font-size: 40px;
+  color: white;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  position: absolute;
+  top: 50%;
+  left: 29.8%;
+}
+
+.title3 {
+  margin: 50px 265px 50px;
+  position: absolute;
+}
+.enterzone {
+position: absolute;
+width: 30vw;
+height: 30vh;
+top: 62%;
+left: 40%;
+color: white;  
+font-family: "Jersey 15", sans-serif;
+font-size: 20px;
+}
+.enterzone > p {
+  position: absolute;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+ padding-top: 30px;
+}
+
+.enterzone > p:nth-child(1) {
+  font-size: 30px;
+  position: absolute;
+  padding: 10px 10px 10px 10px;
+}
+
+.enterzone > p:nth-child(2) {
+  position: absolute;
+  margin-top: 55px;
+  padding: 0px 10px 10px 10px;
+}
+#text2 > a:hover {
+  color: #80faa3;
+}
+.enterzone > p:nth-child(3) {
+  position: absolute;
+  margin-top: 95px;
+  padding: 0px 10px 10px 10px;
+}
+#text3 > a:hover {
+  color: #0ab4fc;
+}
+.enterzone > p:nth-child(4) {
+  position: absolute;
+  margin-top: 135px;
+  padding: 0px 10px 10px 10px;
+}
+#text4 > a:hover {
+  color: #ffb3df;
+}
+.enterzone > p:nth-child(5) {
+  position: absolute;
+  margin-top: 175px;
+  padding: 0px 10px 10px 10px;
+}
+#text5 > a:hover {
+  color: lightgoldenrodyellow;
+}
+.enterzone > p:nth-child(6) {
+  position: absolute;
+  margin-top: 215px;
+  padding: 0px 10px 10px 10px;
+}
+#text6> a:hover {
+  color: lightskyblue;
+}
+
+@keyframes my-animation1 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  width: 100vw;
+}
+
+.scroll-text1 {
+  transform: translateX(-100%);
+  animation: my-animation1 20s linear infinite;
+}
+
+.activity-feed1 {
+  min-height: 3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: center;
+  align-items: center;
+  background: black;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.activity-feed1 > .tlqkf{
+  position: absolute;
+  right: 0;
+  background-color: black;
+  height: 100%;
+  width: 19%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 0 10px 0px 10px;
+  border-left: 1px solid white;
+}
+.tlqkf > p {
+  padding: 13px 0 0 0;
+}
+
+.scroll-container1 {
+  overflow: hidden;
+  height: 100%;
+  background: black;
+  border-right: 1px solid white;
+}
+
+.activity-feed1 ul {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  gap: 20rem;
+  background: black;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-feed1 ul li {
+  font-size: var(--font-size-2);
+  font-weight: bold;
+  background: white;
+  color: black;
+  padding: 0.5rem;
+  margin: 0;
+  border: 1px solid black;
+  box-shadow: 3px 3px var(--color7);
+  list-style: none;
+}
+
+@keyframes my-animation {
+	from {
+		-webkit-transform: translateX(100%);
+	}
+	to {
+		-webkit-transform: translateX(-200%);
+	}
+}
+
+.bottom {
+	position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  width: 100vw;
+}
+.scroll-text {
+	-moz-transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+
+	-moz-animation: my-animation 20s ease-out infinite;
+	-webkit-animation: my-animation 20s ease-out infinite;
+	animation: my-animation 20s linear infinite;
+}
+
+.activity-feed {
+	min-height: 3rem;
+	display: grid;
+	grid-template-columns: 20% 1fr;
+	align-content: center;
+	align-items: center;
+	bottom: 0;
+	right: 0;
+	background: black;
+	width: 100vw;
+	border-top: 1px solid white;
+}
+
+.activity-feed h2 {
+	color: white;
+	z-index: 2;
+	font-size: 20px;
+	padding: 0 10px 0px 90px;
+}
+
+.scroll-container {
+	overflow: hidden;
+	height: 100%;
+	background: black;
+	border-left: 1px solid white;
+}
+
+.activity-feed ul {
+	display: flex;
+	height: 3rem;
+	align-items: center;
+	gap: 20rem;
+	background: black;
+	width: 250%;
+}
+
+.activity-feed ul li {
+	font-size: var(--font-size-2);
+	font-weight: bold;
+	background: white;
+	color: black;
+	padding: 0.5rem;
+	margin: 0;
+	border: 1px solid black;
+	box-shadow: 3px 3px var(--color7);
+}
+.back {
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 3%;
+  font-size: 3em;
+  font-family: 'Jersey 15';
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+}
