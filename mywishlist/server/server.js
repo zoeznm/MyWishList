@@ -14,6 +14,10 @@ app.get("/", (req, res) => {
   res.render("main"); // client/views/main.ejs
 });
 
+app.get("/top", (req, res) => {
+  res.render("top"); // client/views/top.ejs
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
