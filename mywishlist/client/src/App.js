@@ -13,6 +13,7 @@ const App = () => {
       // 이미 뒤집힌 카드라면 해당 경로로 이동
       switch (cardIndex) {
         case 1:
+          console.log("save");
           navigate("/top");
           break;
         case 2:
