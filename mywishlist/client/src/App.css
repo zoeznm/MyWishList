@@ -8,6 +8,8 @@
   padding: 0;
   margin: 0;
   -tap-highlight-color: rgba(255, 255, 255, 0);
+}
+html,body {
   background-color: black;
 }
 
