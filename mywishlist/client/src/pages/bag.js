@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/bag.css";
 import "../scripts/bag.js"; // 스크립트 임포트 필요 시 추가
 
-const App = () => {
+const Bag = () => {
   const [popupVisible, setPopupVisible] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [enterCount, setEnterCount] = useState(0);
@@ -206,4 +206,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Bag;
