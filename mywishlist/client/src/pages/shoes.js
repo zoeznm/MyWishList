@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "../styles/shoes.css"; 
+import styles from "../styles/shoes.module.css"; 
 
 const Shoes = () => {
   const shoesData = [
@@ -72,8 +72,9 @@ const Shoes = () => {
   const hoverTexts = useRef([]);
 
   useEffect(() => {
-    const hoverDivs = Array.from(document.querySelectorAll('.hover-div'));
-    
+    const hoverDivs = Array.from(document.querySelectorAll('.hover_div'));
+    console.log(hoverDivs.length); 
+
     hoverDivs.forEach((hoverDiv, index) => {
       hoverDiv.addEventListener("mouseover", () => {
         followImages.current[index].style.display = "block";
@@ -103,12 +104,12 @@ const Shoes = () => {
   }, []);
 
   return (
-    <div className="grid-container">
-      <a href="/main" className="back"><p>Back</p></a>
+    <div className={styles.grid_container}>
+      <a href="/main" className={styles.back}><p>Back</p></a>
       {shoesData.map(shoe => (
-        <div key={shoe.id} className={`grid-item hover-div hover-div${shoe.id}`}>
+        <div key={shoe.id} className={`${styles.grid_item} ${styles.hover_div} ${styles[`hover_div${shoe.id}`]}`}>
           <img
-            className={`follow-image follow-image${shoe.id}`}
+            className={`${styles.follow_image} ${styles[`follow_image${shoe.id}`]}`}
             ref={el => followImages.current[shoe.id - 1] = el}
             src={shoe.image}
             alt={shoe.alt}
@@ -121,7 +122,7 @@ const Shoes = () => {
           />
           <button onClick={() => window.location.href = shoe.link}>click the link</button>
           <h1
-            className="hover-text"
+            className={styles.hover_text}
             ref={el => hoverTexts.current[shoe.id - 1] = el}
             style={{
               display: 'none',

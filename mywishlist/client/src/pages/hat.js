@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/hat.css";
+import "../styles/hat.module.css";
 import "../scripts/hat.js";
 
 const Hat = () => {

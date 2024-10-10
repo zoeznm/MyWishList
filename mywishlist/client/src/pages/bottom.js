@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/bottom.css"; 
+import "../styles/bottom.module.css"; 
 import "../scripts/bottom.js";
 
 const Bottom = () => {

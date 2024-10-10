@@ -1,22 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-:root {
-  --color1: #0c2b2d;
-  --color2: #ff665e;
-  --color3: #0090d6;
-  --color4: #45bf74;
-  --color5: #f6e245;
-}
+
 * {
   padding: 0;
   margin: 0;
 }
-.grid-container {
+.grid_container {
   display: grid;
   grid-template-columns: auto auto auto;
   background-color: #fff;
   padding: 1px;
 }
-.grid-item {
+.grid_item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 132px;
@@ -36,63 +30,63 @@ button:hover {
   border: 1px solid #fff;
   border-radius: 100px;
 }
-.follow-image1 {
+.follow_image1 {
   position: absolute;
   display: none;
   width: 200px;
   height: 300px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image2 {
+.follow_image2 {
   position: absolute;
   display: none;
   width: 250px;
   height: 200px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image3 {
+.follow_image3 {
   position: absolute;
   display: none;
   width: 250px;
   height: 150px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image4 {
+.follow_image4 {
   position: absolute;
   display: none;
   width: 250px;
   height: 150px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image5 {
+.follow_image5 {
   position: absolute;
   display: none;
   width: 200px;
   height: 300px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image6 {
+.follow_image6 {
   position: absolute;
   display: none;
   width: 300px;
   height: 150px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image7 {
+.follow_image7 {
   position: absolute;
   display: none;
   width: 250px;
   height: 150px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image8 {
+.follow_image8 {
   position: absolute;
   display: none;
   width: 250px;
   height: 200px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
-.follow-image9 {
+.follow_image9 {
   position: absolute;
   display: none;
   width: 250px;
@@ -120,7 +114,7 @@ a {
   left: 27%;
   margin-top: 10px;
 }
-.hover-text {
+.hover_text {
   display: none; /* 기본적으로 숨김 */
   position: absolute;
   font-size: 20px;

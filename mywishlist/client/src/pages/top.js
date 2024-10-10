@@ -20,10 +20,13 @@ const Top = () => {
             </div>
           </div>
           <div className={styles.menubar}>
-            <a href="/main" className={styles.back}>
+            {/* <a href="/main" className={styles.back1}>
+              Back
+            </a> */}
+            <div className={styles.menuitem}>
+            <a href="/main" className={styles.back1}>
               Back
             </a>
-            <div className={styles.menuitem}>
               <span>F</span>ile
             </div>
             <div className={styles.menuitem}>

@@ -97,11 +97,11 @@ const Bag = () => {
   };
 
   return (
-    <div className="container" id="container">
-      <div className="section" id="home">
+    <div className={styles.container} id="container">
+      <div className={styles.section} id="home">
         {popupVisible && (
-          <div id="popup" className="popup">
-            <div className="popup-content">
+          <div id="popup" className={styles.popup}>
+            <div className={styles.popup_content}>
               <span id="closePopupBtn" className="close" onClick={closePopup}>
                 &times;
               </span>
