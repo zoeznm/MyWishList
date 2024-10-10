@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // React 18부터 ReactDOM의 import 방식이 변경되었습니다.
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // React Router import
-import App from "./App"; // 메인 페이지
-import Top from "./pages/Top";
-import Bottom from "./pages/Bottom";
-import Bag from "./pages/Bag";
-import Hat from "./pages/Hat";
-import Shoes from "./pages/Shoes";
+import App from "./App.js"; // 메인 페이지
+import Top from "./pages/top.js";
+import Bottom from "./pages/bottom.js";
+import Bag from "./pages/bag.js";
+import Hat from "./pages/hat.js";
+import Shoes from "./pages/shoes.js";
 const root = ReactDOM.createRoot(document.getElementById("root")); // root 생성
 root.render(
   <Router>

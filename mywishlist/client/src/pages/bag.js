@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/bag.css";
+import styles from "../styles/bag.module.css";
 import "../scripts/bag.js"; // 스크립트 임포트 필요 시 추가
 
 const Bag = () => {
@@ -106,7 +106,7 @@ const Bag = () => {
                 &times;
               </span>
               <h2>MUST READ</h2>
-              <div className="poptext1">
+              <div className={styles.poptext1}>
                 {" "}
                 ❉ &nbsp; First, enter “wishlist” in the blank field.
               </div>
